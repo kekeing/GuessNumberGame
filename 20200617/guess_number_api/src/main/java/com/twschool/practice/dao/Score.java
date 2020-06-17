@@ -21,6 +21,12 @@ public class Score {
 
     public void addScore(int score){
         if (score == 3) {
+            if (this.winSeriesTimes  > 3){
+                this.score += 2;
+            }
+            if (this.winSeriesTimes  > 5){
+                this.score += 3;
+            }
             this.score += score;
             this.winSeriesTimes++;
         }
