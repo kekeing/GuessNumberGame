@@ -2,14 +2,10 @@ package com.twschool.practice.dao;
 
 public class Score {
     private String userId;
-    private int Score;
+    private int score;
 
-    public Score(String userId, int score) {
-        this.userId = userId;
-        Score = score;
-    }
-
-    public Score() {
+    public void addScore(int score){
+        this.score += score;
     }
 
     public String getUserId() {
@@ -21,10 +17,18 @@ public class Score {
     }
 
     public int getScore() {
-        return Score;
+        return score;
     }
 
     public void setScore(int score) {
-        Score = score;
+        this.score = score;
+    }
+
+    public Score(String userId, int score) {
+        this.userId = userId;
+        this.score = score;
+    }
+
+    public Score() {
     }
 }
