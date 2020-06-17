@@ -20,8 +20,17 @@ public class Score {
     }
 
     public void addScore(int score){
-        this.score += score;
-        this.winSeriesTimes ++;
+        if (score == 3) {
+            this.score += score;
+            this.winSeriesTimes++;
+        }
+        else if (score < 0){
+            this.score += score;
+            this.winSeriesTimes = 0;
+        }else {
+            this.score += score;
+        }
+
     }
     public void deleteScore(int score){
         this.score = this.score - score;
